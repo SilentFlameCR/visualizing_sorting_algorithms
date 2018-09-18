@@ -20,8 +20,8 @@ function draw() {
         }
         line(i * 4 + 2, 0, i * 4 + 2, c);
     });
-//    bubbleSort();
-//     selectionSort();
+    bubbleSort(numbers);
+//     selectionSort(numbers);
 }
 
 function generateNumbers() {
@@ -31,30 +31,38 @@ function generateNumbers() {
     }
 }
 
-function bubbleSort() {
-    for(var i=0; i < numbers.length; i++){
-        if(numbers[i]<numbers[i+1]){
-            var temp = numbers[i+1];
-            numbers[i+1] = numbers[i];
-            numbers[i]=temp;
+function bubbleSort(array) {
+    for(var i=0; i < array.length; i++){
+        if(array[i]<array[i+1]){
+            var temp = array[i+1];
+            array[i+1] = array[i];
+            array[i]=temp;
             
         }
     }
 }
 
-function selectionSort() {
-    for(var i=0; i<numbers.length; i++){
-        if(numbers[i] === max(numbers)) {
-            var temp = numbers[i];
-            var tempNumbers = [];
-            numbers.push(numbers.splice(numbers.indexOf(numbers[i]), 1)[0]);
-        
-            tempNumbers[i] = temp;
-            
-            
-        }
-    }
+// swap function helper
+function swap(array, i, j) {
+  var temp = array[i];
+  array[i] = array[j];
+  array[j] = temp;
+}
+
+function selectionSort(array) {
+  for(var i = 0; i < array.length; i++) {
     
+    var min = i;
+    for(var j = i + 1; j < array.length; j++) {
+      if(array[j] < array[min]) {
+        min = j;
+      }
+    }
+    if(i !== min) {
+      swap(array, i, min);
+    }
+  }
+  console.log(array);
 }
 
 /*
