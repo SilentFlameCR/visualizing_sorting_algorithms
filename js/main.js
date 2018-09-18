@@ -20,8 +20,8 @@ function draw() {
         }
         line(i * 4 + 2, 0, i * 4 + 2, c);
     });
-    bubbleSort();
-//      selectionSort();
+//    bubbleSort();
+//     selectionSort();
 }
 
 function generateNumbers() {
@@ -43,15 +43,26 @@ function bubbleSort() {
 }
 
 function selectionSort() {
-    for(var i=0;i<numbers.length;i++){
-        if(numbers[i] === min(numbers)) {
+    for(var i=0; i<numbers.length; i++){
+        if(numbers[i] === max(numbers)) {
             var temp = numbers[i];
             var tempNumbers = [];
             numbers.push(numbers.splice(numbers.indexOf(numbers[i]), 1)[0]);
         
+            tempNumbers[i] = temp;
+            
             
         }
     }
     
 }
+
+/*
+    Array = [3,2,1]
+    Take highest value and push to the end
+    Also splice it from current position
+    Do I need a temp array?
+    loop happens once since the highest number never changes
+    need a way to exclude highest number in next calculation     
+*/
 
