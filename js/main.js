@@ -23,7 +23,8 @@ function draw() {
 
 
     bubbleSort(numbers);
-//    selectionSort(numbers);  
+//    selectionSort(numbers);
+//    insertionSort(numbers);
 
 }
 
@@ -68,6 +69,25 @@ function selectionSort(array) {
   }
   console.log(array);
 }
+
+function insertionSort(array){
+  var i, len = array.length, el, j;
+
+  for(i = 1; i<len; i++){
+    el = array[i];
+    j = i;
+
+    while(j>0 && array[j-1]>array[j]){
+      array[j] = array[j-1];
+      j--;
+   }
+
+   array[j] = el;
+  }
+
+  return arr;
+}
+        
 
 /*
     Array = [3,2,1]
