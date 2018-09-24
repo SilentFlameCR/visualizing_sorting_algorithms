@@ -85,7 +85,7 @@ function insertionSort(array){
    array[j] = el;
   }
 
-  return arr;
+  console.log(array);
 }
         
 
