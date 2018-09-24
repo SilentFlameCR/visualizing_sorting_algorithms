@@ -1,7 +1,7 @@
 let numbers = [];
 
 function setup() {
-    createCanvas(windowWidth,windowHeight);
+    createCanvas(800,500);
     generateNumbers();
     frameRate(2);
     strokeWeight(4);
@@ -29,7 +29,7 @@ function draw() {
 }
 
 function generateNumbers() {
-    for(var i = 0; i < width; i++) {
+    for(var i = 0; i < 200; i++) {
         var h = Math.floor(Math.random() * height + 1);
         numbers[i] = h;
     }
