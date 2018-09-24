@@ -21,6 +21,7 @@ function draw() {
         line(i * 4 + 2, 0, i * 4 + 2, c);
     });
 
+
     bubbleSort(numbers);
 //    selectionSort(numbers);  
 
@@ -44,7 +45,6 @@ function bubbleSort(array) {
     }
     console.log(array);
 }
-
 
 // swap function helper
 function swap(array, i, j) {
