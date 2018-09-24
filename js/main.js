@@ -20,8 +20,12 @@ function draw() {
         }
         line(i * 4 + 2, 0, i * 4 + 2, c);
     });
+
+
     bubbleSort(numbers);
+
 //     selectionSort(numbers);
+
 //    insertionSort(numbers);
 
 }
@@ -50,7 +54,7 @@ function swap(array, i, j) {
   var temp = array[i];
   array[i] = array[j];
   array[j] = temp;
-<<<<<<< HEAD
+
 }
 
 function selectionSort(array) {
