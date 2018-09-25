@@ -23,7 +23,9 @@ function draw() {
 
 
     bubbleSort(numbers);
-//    selectionSort(numbers);
+
+//     selectionSort(numbers);
+
 //    insertionSort(numbers);
 
 }
@@ -52,6 +54,7 @@ function swap(array, i, j) {
   var temp = array[i];
   array[i] = array[j];
   array[j] = temp;
+
 }
 
 function selectionSort(array) {
@@ -87,13 +90,3 @@ function insertionSort(array){
 
   console.log(array);
 }
-        
-
-/*
-    Array = [3,2,1]
-    Take highest value and push to the end
-    Also splice it from current position
-    Do I need a temp array?
-    loop happens once since the highest number never changes
-    need a way to exclude highest number in next calculation     
-*/
