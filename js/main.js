@@ -3,7 +3,7 @@ let numbers = [];
 function setup() {
     createCanvas(800,500);
     generateNumbers();
-    frameRate(2);
+    frameRate(24);
     strokeWeight(4);
 }
 
