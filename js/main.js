@@ -24,7 +24,9 @@ function draw() {
 
     bubbleSort(numbers);
 
+
 //     selectionSort(numbers);
+
 
 //    insertionSort(numbers);
 
