@@ -21,13 +21,9 @@ function draw() {
         line(i * 4 + 2, 0, i * 4 + 2, c);
     });
 
-
-    bubbleSort(numbers);
-
-
+    selectSortingMethod();
+//    bubbleSort(numbers);
 //     selectionSort(numbers);
-
-
 //    insertionSort(numbers);
 
 }
@@ -38,6 +34,29 @@ function generateNumbers() {
         numbers[i] = h;
     }
 }
+
+function selectSortingMethod() {
+    let select = document.getElementById("select").value;
+    switch(select) {
+        case "bubble":
+            bubbleSort(numbers);
+            break;
+        case "selection":
+            selectionSort(numbers);
+            break;
+        case "insertion":
+            insertionSort(numbers);
+            break;
+    }
+    
+}
+
+function mix() {
+    let select = document.getElementById("select").value = "default";
+    generateNumbers();
+}
+
+/*The sorting functions start here*/
 
 function bubbleSort(array) {
     for(var i=0; i < array.length; i++){

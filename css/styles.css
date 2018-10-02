@@ -31,3 +31,12 @@
 canvas {
     display: block;
 }
+
+.ui {
+    margin-bottom: 1em;
+}
+
+.ui select, .ui button {
+    height: 60px;
+    padding: 20px
+}
